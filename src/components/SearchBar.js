@@ -6,6 +6,7 @@ const SearchBar = () => {
   const handleClick = event => {
     event.preventDefault();
     setSearchInput(event.target.value);
+    console.log(searchInput);
   };
 
   const handleChange = event => {
