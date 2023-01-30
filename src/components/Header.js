@@ -1,10 +1,14 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
+import { useScrollDirection } from "../hooks/useScrollDirection";
 
 const Header = () => {
+  const scrollDirection = useScrollDirection();
   return (
-    <header className="header">
+    <header
+      className={`header ${scrollDirection === "down" ? "hide" : "show"}`}
+    >
       <Link
         style={{ textDecoration: "none", marginLeft: 100, marginRight: 100 }}
         to="/"
