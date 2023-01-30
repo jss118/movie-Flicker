@@ -32,9 +32,13 @@ const Movies = () => {
                 src={movie.imgUrl}
                 alt="Movie poster"
               />
-              <h3>{movie.title}</h3>
-              <p>Directed by: {movie.director}</p>
-              <p>likes: {movie.likes}</p>
+              <h3 className="movie_div-descriptionToCenter">{movie.title}</h3>
+              <p className="movie_div-descriptionToCenter">
+                Directed by: {movie.director}
+              </p>
+              <p className="movie_div-descriptionToCenter">
+                likes: {movie.likes}
+              </p>
             </div>
           </Link>
         );
