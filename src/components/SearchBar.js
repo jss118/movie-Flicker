@@ -1,14 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const SearchBar = () => {
-  const [searchInput, setSearchInput] = useState("");
-
-  const handleClick = event => {
-    event.preventDefault();
-    setSearchInput(event.target.value);
-    console.log(searchInput);
-  };
-
+const SearchBar = ({ searchInput, setSearchInput }) => {
   const handleChange = event => {
     setSearchInput(event.target.value);
   };
@@ -25,14 +17,6 @@ const SearchBar = () => {
         onChange={handleChange}
         name="query"
       />
-      <button
-        onClick={handleClick}
-        type="submit"
-        value={searchInput}
-        id="search-bar-btn"
-      >
-        <span>&#8250;</span>
-      </button>
     </form>
   );
 };
