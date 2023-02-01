@@ -3,8 +3,9 @@ import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom";
 import { useScrollDirection } from "../hooks/useScrollDirection";
 
-const Header = () => {
+const Header = ({ searchInput, setSearchInput }) => {
   const scrollDirection = useScrollDirection();
+
   return (
     <header
       className={`header ${scrollDirection === "down" ? "hide" : "show"}`}
@@ -16,7 +17,7 @@ const Header = () => {
         <h1 className="header_h1">Movie Flicker</h1>
       </Link>
       <p className="header_p">Search. Discover. Immerse.</p>
-      <SearchBar />
+      <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
     </header>
   );
 };

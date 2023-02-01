@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { fetchSingleMovie } from "../Utils/fetchSingleMovie";
 
 const SingleMovie = () => {
@@ -22,6 +22,9 @@ const SingleMovie = () => {
       <h1 className="singleMovie_h1">{singleMovie.title}</h1>
       <p className="singleMovieDirector">Directed by: {singleMovie.director}</p>
       <p className="singleMovieDescription">{singleMovie.description}</p>
+      <Link to="/" className="backLink__singleMovieComp">
+        back to movies
+      </Link>
     </div>
   );
 };
