@@ -3,6 +3,7 @@ import React from "react";
 const SearchBar = ({ searchInput, setSearchInput }) => {
   const handleChange = event => {
     setSearchInput(event.target.value);
+    window.scrollTo(0, 0);
   };
 
   return (
